@@ -1,0 +1,273 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Sets user-defined palette
+palette = "catppuccin_frappe"
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Default format of Starship
+format = """
+$directory\
+[(\\($git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\\)) ](bold mauve)\
+$fill $all\
+$status\
+$shell\
+$memory_usage\
+$time
+$character
+"""
+
+
+[character]
+success_symbol  = "[❯](green)"
+error_symbol    = "[!](red)"
+
+
+[directory]
+truncation_symbol   = ".."
+truncation_length   = 5
+truncate_to_repo    = false
+style               = "bold green"
+
+
+[fill]
+symbol      = "."
+style       = "base"
+
+
+[git_branch]
+format      = '$symbol$branch(:$remote_branch) '
+
+
+[git_status]
+conflicted  = "!"
+ahead       = " +${count}"
+behind      = " -${count}"
+diverged    = " +${ahead_count} -${behind_count}"
+untracked   = " ?${count}"
+stashed     = " stsh"
+modified    = " ~${count}"
+staged      = " stg ${count}"
+renamed     = " rn ${count}"
+deleted     = " del ${count}"
+format      = '$all_status$ahead_behind'
+
+
+[memory_usage]
+disabled    = false
+format      = ' MEM: [${ram}](subtext_1)'
+threshold   = 0
+
+
+[status]
+disabled    = false
+format      = ' [\[Exit Code: $status\]](red)'
+
+
+[time]
+disabled    = false
+format      = ' [$time]($style) '
+
+
+# Languages
+[lua]
+format      = ' [\[$symbol( $version)\]](peach)'
+symbol      = 'Lua'
+
+
+[nodejs]
+format      = ' [\[$symbol( $version)\]](peach)'
+symbol      = 'Node'
+
+
+[python]
+format      = ' [\[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))\]](peach)'
+
+
+[rust]
+format      = ' [\[$symbol($version)\]](peach)'
+
+
+[shell]
+disabled    = false
+format      = ' [\[$indicator\]](mauve)'
+
+
+[terraform]
+format      = ' [\[TF $symbol$workspace\]](peach)'
+
+
+[zig]
+format      = ' [\[$symbol( $version)\]](peach)'
+symbol      = '🦎'
+
+
+[palettes.catppuccin_frappe]
+rosewater   = "#f2d5cf"
+flamingo    = "#eebebe"
+pink        = "#f4b8e4"
+mauve       = "#ca9ee6"
+red         = "#e78284"
+maroon      = "#ea999c"
+peach       = "#ef9f76"
+yellow      = "#e5c890"
+green       = "#a6d189"
+teal        = "#81c8be"
+sky         = "#99d1db"
+sapphire    = "#85c1dc"
+blue        = "#8caaee"
+lavender    = "#babbf1"
+text        = "#c6d0f5"
+subtext1    = "#b5bfe2"
+subtext0    = "#a5adce"
+overlay2    = "#949cbb"
+overlay1    = "#838ba7"
+overlay0    = "#737994"
+surface2    = "#626880"
+surface1    = "#51576d"
+surface0    = "#414559"
+base        = "#303446"
+mantle      = "#292c3c"
+crust       = "#232634"
+
+
+# Disabled mods..
+[aws]
+disabled = true
+[azure]
+disabled = true
+[battery]
+disabled = true
+[buf]
+disabled = true
+[bun]
+disabled = true
+[c]
+disabled = true
+[cmake]
+disabled = true
+[cobol]
+disabled = true
+[cmd_duration]
+disabled = true
+[conda]
+disabled = true
+[container]
+disabled = true
+[crystal]
+disabled = true
+[daml]
+disabled = true
+[dart]
+disabled = true
+[deno]
+disabled = true
+[docker_context]
+disabled = true
+[dotnet]
+disabled = true
+[elixir]
+disabled = true
+[elm]
+disabled = true
+[env_var]
+disabled = true
+[erlang]
+disabled = true
+[fennel]
+disabled = true
+[fossil_branch]
+disabled = true
+[gcloud]
+disabled = true
+[golang]
+disabled = true
+[guix_shell]
+disabled = true
+[gradle]
+disabled = true
+[haskell]
+disabled = true
+[haxe]
+disabled = true
+[helm]
+disabled = true
+[hostname]
+disabled = true
+[java]
+disabled = true
+[jobs]
+disabled = true
+[julia]
+disabled = true
+[kotlin]
+disabled = true
+[kubernetes]
+disabled = true
+[line_break]
+disabled = true
+[localip]
+disabled = true
+[meson]
+disabled = true
+[hg_branch]
+disabled = true
+[nim]
+disabled = true
+[nix_shell]
+disabled = true
+[ocaml]
+disabled = true
+[opa]
+disabled = true
+[openstack]
+disabled = true
+[os]
+disabled = true
+[package]
+disabled = true
+[perl]
+disabled = true
+[php]
+disabled = true
+[pijul_channel]
+disabled = true
+[pulumi]
+disabled = true
+[purescript]
+disabled = true
+[rlang]
+disabled = true
+[raku]
+disabled = true
+[red]
+disabled = true
+[ruby]
+disabled = true
+[scala]
+disabled = true
+[shlvl]
+disabled = true
+[singularity]
+disabled = true
+[spack]
+disabled = true
+[sudo]
+disabled = true
+[swift]
+disabled = true
+[username]
+disabled = true
+[vagrant]
+disabled = true
+[vlang]
+disabled = true
+[vcsh]
+disabled = true
+

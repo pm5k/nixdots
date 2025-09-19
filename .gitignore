@@ -1,0 +1,23 @@
+# Ignore everything by default
+*
+/*
+
+# Allow specific files and directories
+!.gitignore
+!nixos/
+!nixos/**
+!dev-flakes/
+!dev-flakes/**
+!nvim/
+!nvim/**
+!zsh-modules/
+!zsh-modules/**
+!.zshrc
+!README.md
+
+# Explicit ignores
+environment.d/
+fontconfig/
+starship/
+systemd/
+tmux/
