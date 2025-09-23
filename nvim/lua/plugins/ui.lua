@@ -18,10 +18,11 @@ return {
     },
   },
 
-  -- Markdown rendering
+  -- Markdown rendering - only load for markdown files
   {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    ft = { 'markdown', 'md', 'livemd' },
     opts = {},
   },
 
