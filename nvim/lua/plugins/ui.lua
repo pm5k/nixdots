@@ -30,6 +30,12 @@ return {
     'folke/which-key.nvim',
     event = 'VimEnter',
     opts = {
+      win = {
+        height = { min = 15, max = 30 },
+      },
+      layout = {
+        spacing = 1,
+      },
       icons = {
         mappings = vim.g.have_nerd_font,
         keys = vim.g.have_nerd_font and {} or {
@@ -66,12 +72,17 @@ return {
       spec = {
         { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
         { '<leader>d', group = '[D]ocument' },
-        { '<leader>r', group = '[R]ename' },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>w', group = '[W]orkspace' },
-        { '<leader>t', group = '[T]oggle' },
+        { '<leader>e', group = '[E]rror/Diagnostics' },
+        { '<leader>f', group = '[F]ile' },
         { '<leader>g', group = '[G]it' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>l', group = '[L]anguage' },
+        { '<leader>p', group = '[P]aste/Edit' },
+        { '<leader>q', group = '[Q]uickfix' },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>w', group = '[W]orkspace' },
       },
     },
   },

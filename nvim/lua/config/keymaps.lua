@@ -86,7 +86,7 @@ if not vim.g.vscode then
 end
 
 -- Search project TODOs using todo-comments plugin
-vim.keymap.set('n', '<leader>t', '<CMD>TodoTelescope<CR>', { desc = 'Search project TODO using Telescope' })
+vim.keymap.set('n', '<leader>st', '<CMD>TodoTelescope<CR>', { desc = '[S]earch project [T]ODO using Telescope' })
 
 -- Custom user commands
 vim.api.nvim_create_user_command('DBUIEditConnectionsJSON', function()
