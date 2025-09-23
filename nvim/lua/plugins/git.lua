@@ -1,11 +1,40 @@
--- Adds git related signs to the gutter, as well as utilities for managing changes
--- NOTE: gitsigns is already included in init.lua but contains only the base
--- config. This will add also the recommended keymaps.
+-- Git integration plugins
+-- https://github.com/tpope/vim-fugitive
+-- https://github.com/tpope/vim-rhubarb
+-- https://github.com/lewis6991/gitsigns.nvim
 
 return {
+  -- Git commands in nvim
+  'tpope/vim-fugitive',
+
+  -- GitHub integration for fugitive
+  'tpope/vim-rhubarb',
+
+  -- Modern Git UI
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim',
+      'nvim-telescope/telescope.nvim',
+      'ibhagwan/fzf-lua',
+      'echasnovski/mini.pick',
+      'folke/snacks.nvim',
+    },
+    config = true,
+  },
+
+  -- Git decorations and utilities
   {
     'lewis6991/gitsigns.nvim',
     opts = {
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+      },
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
 

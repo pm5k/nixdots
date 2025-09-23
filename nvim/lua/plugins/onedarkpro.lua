@@ -1,4 +1,5 @@
--- onedarkpro
+-- OneDark Pro Theme
+-- Modern dark theme with multiple variants
 -- https://github.com/olimorris/onedarkpro.nvim
 
 return {

@@ -9,7 +9,10 @@
 !dev-flakes/
 !dev-flakes/**
 !nvim/
-!nvim/**
+!nvim/init.lua
+!nvim/lua/
+!nvim/lua/**
+!nvim/lazy-lock.json
 !zsh-modules/
 !zsh-modules/**
 !.zshrc
