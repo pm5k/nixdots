@@ -7,9 +7,8 @@
 -- kickstart.nvim and not kitchen-sink.nvim ;)
 
 return {
-  -- NOTE: Yes, you can install new plugins here!
+  -- Debug Adapter Protocol - only loads when debugging
   'mfussenegger/nvim-dap',
-  -- NOTE: And you can specify dependencies as well
   dependencies = {
     -- Creates a beautiful debugger UI
     'rcarriga/nvim-dap-ui',
@@ -24,8 +23,17 @@ return {
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
   },
+  -- Lazy load on debug commands or keymaps
+  cmd = {
+    'DapToggleBreakpoint',
+    'DapContinue',
+    'DapStepOver',
+    'DapStepInto',
+    'DapStepOut',
+    'DapTerminate',
+  },
   keys = {
-    -- Basic debugging keymaps, feel free to change to your liking!
+    -- Only load debug stack when these keys are pressed
     { '<F5>', function() require('dap').continue() end, desc = 'Debug: Start/Continue' },
     { '<F1>', function() require('dap').step_into() end, desc = 'Debug: Step Into' },
     { '<F2>', function() require('dap').step_over() end, desc = 'Debug: Step Over' },
@@ -38,7 +46,6 @@ return {
       end,
       desc = 'Debug: Set Breakpoint',
     },
-    -- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
     { '<F7>', function() require('dapui').toggle() end, desc = 'Debug: See last session result.' },
   },
   config = function()
