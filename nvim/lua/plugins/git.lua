@@ -21,6 +21,13 @@ return {
       'echasnovski/mini.pick',
       'folke/snacks.nvim',
     },
+    cmd = 'Neogit',
+    keys = {
+      { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Git status (Neogit)' },
+      { '<leader>gc', '<cmd>Neogit commit<cr>', desc = 'Git [c]ommit (Neogit)' },
+      { '<leader>gp', '<cmd>Neogit push<cr>', desc = 'Git [p]ush (Neogit)' },
+      { '<leader>gl', '<cmd>Neogit log<cr>', desc = 'Git [l]og (Neogit)' },
+    },
     config = true,
   },
 
