@@ -49,8 +49,10 @@
       ripgrep       # recursively searches directories for a regex pattern {grep,rg,search,regex,fast}
       ruff          # extremely fast Python linter and code formatter {python,lint,format,fast}
       rustup        # Rust toolchain installer and version manager {rust,compiler,toolchain,cargo}
+      superfile     # Pretty fancy and modern terminal file manager {file,files,manager,file manager,super}
       tldr          # simplified and community-driven man pages {man,help,docs,examples,simple}
       unzip         # extract files from ZIP archives {zip,archive,extract,decompress}
+      zoxide        # zoxide is a smarter cd command, inspired by z and autojump {cd,wd,dir,directory,list}
     ];
   }
 
