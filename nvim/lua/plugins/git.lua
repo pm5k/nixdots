@@ -4,22 +4,13 @@
 -- https://github.com/lewis6991/gitsigns.nvim
 
 return {
-  -- Git commands in nvim
-  'tpope/vim-fugitive',
-
-  -- GitHub integration for fugitive
-  'tpope/vim-rhubarb',
-
   -- Modern Git UI
   {
     'NeogitOrg/neogit',
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'sindrets/diffview.nvim',
-      'nvim-telescope/telescope.nvim',
-      'ibhagwan/fzf-lua',
-      'echasnovski/mini.pick',
-      'folke/snacks.nvim',
+      'nvim-lua/plenary.nvim',        -- required
+      'sindrets/diffview.nvim',       -- optional - Diff integration
+      'nvim-telescope/telescope.nvim', -- optional - picker (already have)
     },
     cmd = 'Neogit',
     keys = {

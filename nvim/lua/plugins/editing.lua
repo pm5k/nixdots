@@ -12,14 +12,6 @@ return {
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       require('mini.surround').setup()
 
-      -- Simple and easy statusline
-      local statusline = require 'mini.statusline'
-      statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- Configure cursor location format
-      statusline.section_location = function()
-        return '%2l:%-2v'
-      end
     end,
   },
 }
