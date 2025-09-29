@@ -45,6 +45,7 @@
       jq            # lightweight and flexible command-line JSON processor {json,parse,query,filter,data}
       nodejs        # JavaScript runtime built on Chrome's V8 engine {javascript,node,runtime,server}
       pipx          # install and run Python applications in isolated environments {python,install,isolated,cli}
+      psql          # Postgres CLI {postgres,db,database,cli}
       python3       # high-level programming language {python,programming,scripting,development}
       ripgrep       # recursively searches directories for a regex pattern {grep,rg,search,regex,fast}
       ruff          # extremely fast Python linter and code formatter {python,lint,format,fast}
