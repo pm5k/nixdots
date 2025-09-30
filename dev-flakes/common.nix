@@ -34,17 +34,18 @@
     # Template-based shell hook generator
     makeShellHook = { emoji, name, toolCmds, example, projectDir, envSetup ? [] }: version: ''
       ${commonDevFunctions}
-      
+
       clear
       printf "${emoji} ${name} ${version} Development Environment\n"
       ${lib.concatMapStrings (cmd: "echo \"${cmd}: $(${cmd} --version 2>/dev/null || echo 'Available')\"\n") toolCmds}
       echo ""
       echo "Ready for ${name} development!"
       echo "Example: ${example}"
-      
-      ${lib.concatStrings envSetup}
-      
+
       goto "${projectDir}"
+
+      ${lib.concatStrings envSetup}
+
       launch_zsh
     '';
   in
