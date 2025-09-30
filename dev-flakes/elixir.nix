@@ -12,6 +12,7 @@
 
       # File watching for development
       inotify-tools
+      watchman
 
       # Phoenix-specific
       tailwindcss_4
