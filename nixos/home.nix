@@ -1,4 +1,4 @@
-  { config, pkgs, ... }:
+  { config, pkgs, claude-code, ... }:
 
   {
     home.username = "tom";
@@ -32,7 +32,7 @@
 
     home.packages = with pkgs; [
       bat           # better cat with syntax highlighting {cat,syntax,highlight,preview,pager}
-      claude-code   # AI assistant for coding {ai,assistant,claude,coding,development}
+      claude-code.packages.${pkgs.system}.default   # AI assistant for coding - latest from flake {ai,assistant,claude,coding,development}
       delta         # syntax-highlighting pager for git diffs {git,diff,pager,syntax,color}
       difftastic    # structural diff tool that understands syntax {git,diff,syntax,code,ast}
       dust          # more intuitive disk usage analyzer {disk,usage,du,size,space}
