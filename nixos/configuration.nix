@@ -19,7 +19,6 @@
     gnumake       # tool which controls the generation of executables {make,build,automation,compile}
     cmake         # cross-platform family of tools for build automation {build,make,c,cpp,cross-platform}
     pkg-config    # system for managing library compile and link flags {library,compile,link,flags,development}
-    zoxide        # smarter cd command with fuzzy finding {cd,navigation,directory,smart,fuzzy}
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

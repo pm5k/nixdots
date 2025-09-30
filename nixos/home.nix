@@ -53,6 +53,7 @@
       superfile     # Pretty fancy and modern terminal file manager {file,files,manager,file manager,super}
       tldr          # simplified and community-driven man pages {man,help,docs,examples,simple}
       unzip         # extract files from ZIP archives {zip,archive,extract,decompress}
+      zoxide        # smarter cd command with fuzzy finding {cd,navigation,directory,smart,fuzzy}
     ];
   }
 
