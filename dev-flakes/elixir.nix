@@ -12,6 +12,9 @@
 
       # File watching for development
       inotify-tools
+
+      # Phoenix-specific
+      tailwindcss_4
     ]);
     
     elixirEnvSetup = ''
